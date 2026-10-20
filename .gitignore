@@ -1,0 +1,7 @@
+fastapivenv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+.idea/
+.DS_Store

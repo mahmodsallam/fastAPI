@@ -1,0 +1,18 @@
+[project]
+name = "atlas"
+version = "0.1.0"
+description = "Atlas - knowledge and workflow platform API"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "httpx",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
