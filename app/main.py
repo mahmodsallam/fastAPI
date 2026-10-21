@@ -1,6 +1,7 @@
 from fastapi import APIRouter, FastAPI
 
 from app.errors import register_exception_handlers
+from app.routers import projects
 
 API_PREFIX = "/api/v1"
 
@@ -14,5 +15,7 @@ api_router = APIRouter(prefix=API_PREFIX)
 def health() -> dict[str, str]:
     return {"status": "ok"}
 
+
+api_router.include_router(projects.router)
 
 app.include_router(api_router)
